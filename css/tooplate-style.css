@@ -424,7 +424,7 @@ b, strong {
   border-color: #ffc200;
 }
 .contact-form .submit-btn {
-  background: #ffc200;
+  background: #474559;
   border-radius: 50px;
   color: #ffffff;
   font-weight: bold;
@@ -433,7 +433,7 @@ b, strong {
   transition: all 0.4s ease;
 }
 .contact-form .submit-btn:hover {
-  background: #474559;
+  background: #ffc200;
 }
 
 .contact-info {

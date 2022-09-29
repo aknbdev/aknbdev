@@ -13,39 +13,3 @@
 .copy-text{
     padding: 4px;
 }
-
-.copy-text[title]{
-    position: relative;
-}
-.copy-text[title]:hover:after {
-    opacity: 1;
-    transition: all 0.1s ease 0.5s;
-    visibility: visible;
-}
-.copy-text[title]:after {
-    content: attr(title);
-    position: absolute;
-    top: -1.6em;
-    left: 70%;
-    padding: 4px 4px 4px 8px;
-    color: #666;
-    white-space: nowrap;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
-    border-radius: 5px;
-    -moz-box-shadow: 0px 0px 4px #666;
-    -webkit-box-shadow: 0px 0px 4px #666;
-    box-shadow: 0px 0px 4px #666;
-    background-image: -moz-linear-gradient(top, #f0eded, #bfbdbd);
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #f0eded), color-stop(1, #bfbdbd));
-    background-image: -webkit-linear-gradient(top, #f0eded, #bfbdbd);
-    background-image: -moz-linear-gradient(top, #f0eded, #bfbdbd);
-    background-image: -ms-linear-gradient(top, #f0eded, #bfbdbd);
-    background-image: -o-linear-gradient(top, #f0eded, #bfbdbd);
-    opacity: 0;
-    z-index: 99999;
-    visibility: hidden;
-}
-.copy-text[title] {
-    position: relative;
-}
