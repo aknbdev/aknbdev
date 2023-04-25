@@ -1,15 +1,80 @@
-.copy-text:hover{
+/* 
+*----------Background-White----------*
+:root {
+    --bg1: #E8EAEC;
+    --text-color: #979797;
+    --color: #000000;
+    --tcolor: rgb(119 119 119);
+  
+    --boxShadow:
+        7px 7px 15px #45566754,
+        -8px -8px 15px rgb(81 101 121 / 4%),
+        inset -5px -4px 13px 0 rgb(81 101 121 / 35%),
+        inset 6px 7px 12px 0 rgb(255 255 255 / 94%);
+  
+    --boxShadow2:
+        inset 4px 4px 8px rgb(189 200 213),
+        inset -4px -4px 8px rgb(255 255 255);
+  
+    --boxShadow3:
+        4px 4px 8px rgb(189 200 213),
+        -4px -4px 8px rgb(255 255 255);
+  
+    --sbShadow:
+        5px 5px 7px rgb(0 0 0 / 25%),
+        inset 2px 2px 5px rgb(255 255 255 / 25%),
+        inset -3px -3px 5px rgb(0 0 0 / 12%);
+  }
+  
+  *----------Background-Dark----------*
+  body.dark-mode {
+    --bg1: #2F363E;
+    --text-color: rgb(255, 208, 0.25);
+    --color: #FFFFFF;
+    --tcolor: rgb(243, 243, 243);
+  
+    --boxShadow:
+        5px 5px 15px rgba(0, 0, 0, 0.25),
+        5px 15px 15px rgba(0, 0, 0, 0.25),
+        inset 5px 5px 10px rgba(0, 0, 0, 0.25),
+        inset 5px 5px 20px rgba(255, 255, 255, 0.2),
+        inset -5px -5px 15px rgba(0, 0, 0, 0.75);
+  
+    --boxShadow2:
+        inset -3px -3px 6px rgb(73, 78, 83),
+        inset 3px 3px 6px rgb(32, 28, 28);
+  
+    --boxShadow3:
+        -3px -3px 6px rgb(73, 78, 83),
+        3px 3px 6px rgb(32, 28, 28);
+  
+    --sbShadow:
+        5px 5px 7px rgb(0 0 0 / 25%),
+        inset 2px 2px 5px rgb(255 255 255 / 25%),
+        inset -3px -3px 5px rgb(0 0 0 / 50%);
+  }
+   */
+
+.copy-text:hover {
     padding: 4px;
     cursor: pointer;
     color: #ffc200;
 }
 
-.my-logo{
+.my-logo {
     align-content: center;
     color: #f7f3f3;
     display: block;
     width: 100%;
 }
-.copy-text{
+
+.copy-text {
     padding: 4px;
+}
+
+#email, #name, #message {
+    border: none;
+    /* margin-left: 10px; */
+    border-radius: 25px;
+    box-shadow: var(--boxShadow2);
 }

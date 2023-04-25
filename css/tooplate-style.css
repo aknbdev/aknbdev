@@ -1,7 +1,72 @@
 @import url("https://fonts.googleapis.com/css?family=Maven+Pro:400,700");
+
+/**----------Background-White----------**/
+:root {
+  --bg1: #E8EAEC;
+  --color: #212121;
+  --color-hover: #ffc200;
+
+
+  --main-color: #5b5b5b;
+  --secondary-color: #325335;
+  --text-color: #979797;
+  --tcolor: rgb(119 119 119);
+
+  --boxShadow:
+      7px 7px 15px #45566754,
+      -8px -8px 15px rgb(81 101 121 / 4%),
+      inset -5px -4px 13px 0 rgb(81 101 121 / 35%),
+      inset 6px 7px 12px 0 rgb(255 255 255 / 94%);
+
+  --boxShadow2:
+      inset 4px 4px 8px rgb(189 200 213),
+      inset -4px -4px 8px rgb(255 255 255);
+
+  --boxShadow3:
+      4px 4px 8px rgb(189 200 213),
+      -4px -4px 8px rgb(255 255 255);
+
+  --sbShadow:
+      5px 5px 7px rgb(0 0 0 / 25%),
+      inset 2px 2px 5px rgb(255 255 255 / 25%),
+      inset -3px -3px 5px rgb(0 0 0 / 12%);
+}
+
+/**----------Background-Dark----------**/
+body.dark-mode {
+  --bg1: #2F363E;
+  --color: #ffffffcc;
+  --color-hover: #ffc200;
+
+
+  --text-color: rgb(255, 208, 0.25);
+  --tcolor: rgb(243, 243, 243);
+
+  --boxShadow:
+      5px 5px 15px rgba(0, 0, 0, 0.25),
+      5px 15px 15px rgba(0, 0, 0, 0.25),
+      inset 5px 5px 10px rgba(0, 0, 0, 0.25),
+      inset 5px 5px 20px rgba(255, 255, 255, 0.2),
+      inset -5px -5px 15px rgba(0, 0, 0, 0.75);
+
+  --boxShadow2:
+      inset -3px -3px 6px rgb(73, 78, 83),
+      inset 3px 3px 6px rgb(32, 28, 28);
+
+  --boxShadow3:
+      -3px -3px 6px rgb(73, 78, 83),
+      3px 3px 6px rgb(32, 28, 28);
+
+  --sbShadow:
+      5px 5px 7px rgb(0 0 0 / 25%),
+      inset 2px 2px 5px rgb(255 255 255 / 25%),
+      inset -3px -3px 5px rgb(0 0 0 / 50%);
+}
+
 body {
   font-family: "Maven Pro", sans-serif;
   padding-top: 70px;
+  background: var(--bg1);
 }
 
 .full-screen {
@@ -15,6 +80,7 @@ body {
   padding: 8px 16px;
   border-radius: 50px;
   letter-spacing: 0.2px;
+  box-shadow: var(--boxShadow3);
 }
 
 ul {
@@ -42,7 +108,7 @@ p {
   font-size: 18px;
   font-weight: 300;
   line-height: 1.5;
-  color: #5b5b5b;
+  color: var(--color);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -53,7 +119,7 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   color: #212121;
   font-size: 2.8em;
-  margin: 24px 0;
+  margin: 30px 0;
 }
 
 h2 {
@@ -72,6 +138,7 @@ b, strong {
 }
 
 .custom-btn {
+  border: none;
   background: #eee;
   color: #5b5b5b;
   font-weight: bold;
@@ -81,6 +148,7 @@ b, strong {
   line-height: normal;
   overflow: hidden;
   transition: all 0.4s ease;
+  box-shadow: var(--sbShadow);
 }
 .custom-btn:hover {
   color: #ffc200;
@@ -102,7 +170,7 @@ b, strong {
   display: inline-block;
   vertical-align: top;
   margin-top: 5px;
-  min-width: 260px;
+  min-width: 300px;
   position: relative;
 }
 
@@ -163,7 +231,7 @@ b, strong {
   left: 0;
   z-index: 999999;
   will-change: transform;
-  transition: transform 200ms linear;
+  transition: transform 400ms linear;
 }
 .navbar[class*="-unpinned"] {
   transform: translate(0, -150%);
@@ -172,8 +240,8 @@ b, strong {
   transform: translate(0, 0);
 }
 .navbar[class*="headroom--not-top"] {
-  background: #ffffff;
-  border-bottom: 1px solid #f0f0f0;
+  background: var(--bg1);
+  box-shadow: var(--boxShadow3);
   padding-top: 0;
   padding-bottom: 0;
 }
@@ -258,12 +326,21 @@ b, strong {
 }
 
 .color-mode {
+  top: 15px;
   font-weight: bold;
   cursor: pointer;
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  box-shadow: var(--boxShadow3);
+  border-radius: 50%;
 }
 
 .color-mode-icon {
-  position: relative;
+  /* position: relative; */
   right: 6px;
 }
 .color-mode-icon:after {
@@ -281,8 +358,9 @@ b, strong {
 }
 
 .dark-mode {
-  background: #0c0c0d;
+  background: var(--bg1);
 }
+
 .dark-mode .navbar-light .navbar-nav .nav-link {
   color: rgba(255, 255, 255, 0.8);
 }
@@ -290,11 +368,11 @@ b, strong {
   color: #ffc200;
 }
 .dark-mode .navbar[class*="headroom--not-top"] {
-  background: #0c0c0d;
+  background: var(--bg1);
   border-bottom: 1px solid #1f1f1f;
 }
 .dark-mode .small-text {
-  background: #0d0c15;
+  background: #0d0c1549;
   color: #ffffff;
 }
 .dark-mode .feature-card .uil,
@@ -411,9 +489,9 @@ b, strong {
 }
 .contact-form .form-control {
   background: transparent;
-  border-radius: 2px;
+  /* border-radius: 2px; */
   outline: none;
-  box-shadow: none;
+  /* box-shadow: none; */
   font-weight: bold;
   margin: 16px 0;
 }
@@ -437,8 +515,11 @@ b, strong {
 }
 
 .contact-info {
-  background: #474559;
-  border-radius: 10px 10px 0 0;
+  border-radius: 25px;
+  box-shadow: var(--boxShadow3)
+  ;
+  background: var(--bg1);
+  /* border-radius: 10px 10px 0 0; */
   position: relative;
   bottom: 8px;
 }
