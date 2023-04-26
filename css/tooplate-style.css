@@ -120,7 +120,7 @@ p {
   font-size: 18px;
   font-weight: 300;
   line-height: 1.5;
-  color: var(--color);
+  color: var(--text-color-sec);
 }
 
 h1, h2, h3, h4, h5, h6 {
