@@ -55,26 +55,9 @@
   }
    */
 
-.copy-text:hover {
-    padding: 4px;
-    cursor: pointer;
-    color: #ffc200;
-}
-
 .my-logo {
     align-content: center;
     color: #f7f3f3;
     display: block;
     width: 100%;
-}
-
-.copy-text {
-    padding: 4px;
-}
-
-#email, #name, #message {
-    border: none;
-    /* margin-left: 10px; */
-    border-radius: 25px;
-    box-shadow: var(--boxShadow2);
 }
