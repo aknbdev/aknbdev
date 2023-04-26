@@ -4,6 +4,7 @@
 :root {
 
   --Onyx: #212121;
+  --White: #ffffff;
   --Light-Grayish: #E8EAEC;
   --Dark-Grayish: #2F363E;
   --Grass-Green: #099109;
@@ -14,17 +15,6 @@
   --text-color-sec: var(--Dark-Grayish);
   --link: var(--Grass-Green);
   --link-hover: var(--Spice-Orange); 
-
-
-
-
-  --bg1: #E8EAEC;
-  --color: #2F363E;
-  --color-2: #099109;
-  
-  --color-hover: #ffc200;
-  --color-hover-2: #e95420;
-  --color-hover-3: #e95420;
 
   --boxShadow:
       7px 7px 15px #45566754,
@@ -61,14 +51,6 @@ body.dark-mode {
   --text-color-sec: var(--Light-Grayish);
   --link: var(--Grass-Green);
   --link-hover: var(--Spice-Orange); 
-
-  --bg1: #2F363E;
-
-  --color: #ffffffcc;
-  --color-2: green;
-  --color-hover: #f2ff00;
-  --color-hover-2: #e95420;
-  --color-hover-3: #e95420;
 
   --boxShadow:
       5px 5px 15px rgba(0, 0, 0, 0.25),
@@ -569,7 +551,7 @@ b, strong {
 .contact-form .submit-btn {
   background: #474559;
   border-radius: 50px;
-  color: var(--White);
+  color: var(--White) !important;
   font-weight: bold;
   border: 0;
   cursor: pointer;
