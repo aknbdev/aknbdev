@@ -5,6 +5,7 @@
   $(".color-mode").click(function () {
     $(".color-mode-icon").toggleClass("active");
     $("body").toggleClass("dark-mode");
+    $(".custom-alert").toggleClass("dark-mode");
   });
 
   // HEADER
@@ -111,6 +112,8 @@ form.addEventListener("submit", async (e) => {
       fullName: nameInput.value,
       message: messageInput.value,
     };
+
+    form.reset();
 
     await updateContactMessage(reqBody);
   }
