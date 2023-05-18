@@ -63,12 +63,17 @@
   color: #ff0000 !important;
   top: 13%;
   z-index: 9999999999 !important;
-  left: 50%;
+  left: 88%;
   transform: translate(-50%, -50%) !important;
   background-color: #e8eaec !important;
   border: none !important;
   box-shadow: var(--boxShadow3) !important;
   display: none;
+}
+
+.custom-alert.dark-mode {
+  background-color: #2f363e !important;
+  box-shadow: var(--boxShadow2) !important;
 }
 
 .custom-alert.active {
