@@ -55,9 +55,35 @@
   }
    */
 
+.custom-alert {
+  max-width: 320px;
+  width: 100% !important;
+  margin: 0 auto;
+  position: fixed !important;
+  color: #ff0000 !important;
+  top: 13%;
+  z-index: 9999999999 !important;
+  left: 50%;
+  transform: translate(-50%, -50%) !important;
+  background-color: #e8eaec !important;
+  border: none !important;
+  box-shadow: var(--boxShadow3) !important;
+  display: none;
+}
+
+.custom-alert.active {
+  display: block !important;
+}
+
+.custom-alert > * {
+  color: #ff0000;
+  margin: 0 !important;
+  margin-top: 4px !important;
+}
+
 .my-logo {
-    align-content: center;
-    color: #f7f3f3;
-    display: block;
-    width: 100%;
+  align-content: center;
+  color: #f7f3f3;
+  display: block;
+  width: 100%;
 }
