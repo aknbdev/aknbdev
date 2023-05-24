@@ -60,7 +60,6 @@
   width: 100% !important;
   margin: 0 auto;
   position: fixed !important;
-  color: #ff0000 !important;
   top: 13%;
   z-index: 9999999999 !important;
   left: 88%;
@@ -69,6 +68,14 @@
   border: none !important;
   box-shadow: var(--boxShadow3) !important;
   display: none;
+}
+
+.error-text {
+  color: red !important;
+}
+
+.text-success {
+  color: green !important;
 }
 
 .custom-alert.dark-mode {
@@ -80,8 +87,7 @@
   display: block !important;
 }
 
-.custom-alert > * {
-  color: #ff0000;
+.custom-alert {
   margin: 0 !important;
   margin-top: 4px !important;
 }
