@@ -52,13 +52,17 @@ function copyElementText(id) {
   document.body.removeChild(elem);
 }
 
-const errorToast = document.querySelector(".custom-alert");
+let loading = false;
+const toastContainer = document.querySelector(".custom-alert");
 const form = document.querySelector("form");
 const nameInput = document.querySelector("#name");
 const emailInput = document.querySelector("#email");
 const messageInput = document.querySelector("#message");
+const loaderEl = document.querySelector("#loader");
 const emailRegExp = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 async function updateContactMessage(body) {
+  loading = true;
+  loaderEl.classList.remove("d-none");
   const response = await fetch(
     "https://api.albarakadarvoza.uz/api/v1/contact-me",
     {
@@ -72,36 +76,51 @@ async function updateContactMessage(body) {
 
   if (response.ok) {
     const data = await response.json();
-    console.log(data);
+
+    toastContainer.innerHTML = `<p class='text-success'>${data?.message}</p>`;
+    toastContainer.classList.add("active");
+
+    let timeOutId = setTimeout(() => {
+      toastContainer.classList.remove("active");
+
+      return clearTimeout(timeOutId);
+    }, 5000);
+    loading = false;
+    form.reset();
+    loaderEl.classList.add("d-none");
   } else {
     console.log(response.status);
+    loading = false;
+    form.reset();
+    loaderEl.classList.add("d-none");
   }
 }
 
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
+  if (loading) return;
   let message = "";
 
   if (nameInput.value === "") {
-    message += "<p>Name is required</p>";
+    message += "<p class='error-text'>Name is required</p>";
   }
   if (emailInput.value === "") {
-    message += "<p>Email is required</p>";
+    message += "<p class='error-text'>Email is required</p>";
   }
   if (messageInput.value === "") {
-    message += "<p>Message is required</p";
+    message += "<p class='error-text'>Message is required</p";
   }
 
   if (emailInput.value !== "" && emailRegExp.test(emailInput.value) === false) {
-    message += "<p>Invalid Email</p>";
+    message += "<p class='error-text'>Invalid Email</p>";
   }
 
   if (message !== "") {
-    errorToast.innerHTML = message;
-    errorToast.classList.add("active");
+    toastContainer.innerHTML = message;
+    toastContainer.classList.add("active");
 
     let timeOutId = setTimeout(() => {
-      errorToast.classList.remove("active");
+      toastContainer.classList.remove("active");
 
       return clearTimeout(timeOutId);
     }, 2000);
@@ -112,8 +131,6 @@ form.addEventListener("submit", async (e) => {
       fullName: nameInput.value,
       message: messageInput.value,
     };
-
-    form.reset();
 
     await updateContactMessage(reqBody);
   }

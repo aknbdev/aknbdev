@@ -24,7 +24,7 @@
 
   <body>
     <!-- Tooltip start -->
-    <div class="alert alert-light custom-alert" role="alert">!</div>
+    <div class="alert alert-light custom-alert" role="alert"></div>
     <!-- Tooltip end -->
 
     <!-- MENU -->
@@ -517,11 +517,18 @@
                   </div>
 
                   <div class="ml-lg-auto col-lg-5 col-12">
-                    <input
-                      type="submit"
-                      class="form-control submit-btn"
-                      value="Send Button"
-                    />
+                    <button type="submit" class="form-control submit-btn">
+                      <div
+                        class="d-flex align-items-center justify-content-center"
+                      >
+                        <div
+                          id="loader"
+                          class="spinner-border text-primary mr-3 d-none"
+                          role="status"
+                        ></div>
+                        Send Button
+                      </div>
+                    </button>
                   </div>
                 </div>
               </form>
