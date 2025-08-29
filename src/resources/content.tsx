@@ -1,5 +1,6 @@
 import { About, Blog, Gallery, Home, Newsletter, Person, Social, Work } from "@/types";
-import { Line, Logo, Row, Text } from "@once-ui-system/core";
+import { Line, Row, Text, InlineCode } from "@once-ui-system/core";
+import Link from "next/link";
 
 const person: Person = {
   firstName: "Abdulaziz",
@@ -65,14 +66,11 @@ const home: Home = {
   },
   subline: (
     <>
-      I'm Abdulaziz, DevOps and Backend engineer at{" "} KPI.com
-      {/* <Logo
-        dark
-        icon="/trademarks/wordmark-dark.svg"
-        style={{ display: "inline-flex", top: "0.25em", marginLeft: "-0.25em" }}
-      /> */}
-      , where I craft seamless,<br />efficient, and scalable
-       systems.
+      I'm Abdulaziz, DevOps and Backend engineer at {" "}
+      <InlineCode style={{padding: 'var(--static-space-2) var(--static-space-8)'}}>
+        <Link href="https://www.kpi.com">KPI.com</Link>
+      </InlineCode> specializing in Java, Spring Boot, and cloud infrastructure.
+      I craft seamless, efficient, and scalable systems that solve real-world problems.
     </>
   ),
 };
