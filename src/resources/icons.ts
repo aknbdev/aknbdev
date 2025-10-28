@@ -88,7 +88,6 @@ export const iconLibrary: Record<string, IconType> = {
   nextjs: SiNextdotjs,
   supabase: SiSupabase,
   figma: SiFigma,
-  docker: SiDocker,
   ansible: SiAnsible,
   springboot: SiSpringboot,
   grafana: SiGrafana,

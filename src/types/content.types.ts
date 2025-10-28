@@ -119,7 +119,7 @@ export interface About extends BasePageConfig {
     display: boolean;
   };
   /** Calendar section configuration */
-  calendar: {
+  cv: {
     /** Whether to display the calendar */
     display: boolean;
     /** Link to the calendar */
