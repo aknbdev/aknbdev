@@ -103,17 +103,7 @@ export default function About() {
                 ))}
               </Row>
             )}
-          </Column>
-        )}
-        <Column className={styles.blockAlign} flex={9} maxWidth={40}>
-          <Column
-            id={about.intro.title}
-            fillWidth
-            minHeight="160"
-            vertical="center"
-            marginBottom="32"
-          >
-            {about.calendar.display && (
+					  {about.cv.display && (
               <Row
                 fitWidth
                 border="brand-alpha-medium"
@@ -128,16 +118,25 @@ export default function About() {
                   backdropFilter: "blur(var(--static-space-1))",
                 }}
               >
-                <Icon paddingLeft="12" name="calendar" onBackground="brand-weak" />
-                <Row paddingX="8">Schedule a call</Row>
+                <Row paddingX="8" paddingRight="4"> Download CV</Row>
                 <IconButton
-                  href={about.calendar.link}
+                  href={about.cv.link}
                   data-border="rounded"
                   variant="secondary"
-                  icon="chevronRight"
+                  icon="download"
                 />
               </Row>
             )}
+          </Column>
+        )}
+        <Column className={styles.blockAlign} flex={9} maxWidth={40}>
+          <Column
+            id={about.intro.title}
+            fillWidth
+            minHeight="160"
+            vertical="center"
+            marginBottom="32"
+          >
             <Heading className={styles.textAlign} variant="display-strong-xl">
               {person.name}
             </Heading>

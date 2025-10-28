@@ -1,5 +1,7 @@
 import { IconType } from "react-icons";
 
+import {HiOutlineDownload,} from "react-icons/hi";
+
 import {
   HiArrowUpRight,
   HiOutlineLink,
@@ -30,9 +32,28 @@ import {
   SiDocker,
   SiAnsible,
   SiSpringboot,
+  SiGrafana,
+  SiPrometheus,
+  SiSentry,
+  SiGnubash,
+  SiNginx,
 } from "react-icons/si";
 
-import { FaDiscord, FaGithub, FaLinkedin, FaX, FaTelegram, FaJava } from "react-icons/fa6";
+import {
+	FaDiscord,
+	FaGithub,
+	FaLinkedin,
+	FaX,
+	FaTelegram,
+	FaJava,
+	FaGitlab,
+	FaJenkins,
+	FaDocker,
+	FaPython,
+	FaGitAlt,
+} from "react-icons/fa6";
+
+import { BiLogoPostgresql } from "react-icons/bi";
 
 export const iconLibrary: Record<string, IconType> = {
   arrowUpRight: HiArrowUpRight,
@@ -53,6 +74,13 @@ export const iconLibrary: Record<string, IconType> = {
   linkedin: FaLinkedin,
   telegram: FaTelegram,
   x: FaX,
+  gitlab: FaGitlab,
+  jenkins: FaJenkins,
+  docker: FaDocker,
+  java: FaJava,
+  python: FaPython,
+  git: FaGitAlt,
+  download: HiOutlineDownload,
   arrowUpRightFromSquare: HiArrowTopRightOnSquare,
   document: HiOutlineDocument,
   rocket: HiOutlineRocketLaunch,
@@ -63,7 +91,12 @@ export const iconLibrary: Record<string, IconType> = {
   docker: SiDocker,
   ansible: SiAnsible,
   springboot: SiSpringboot,
-  java: FaJava,
+  grafana: SiGrafana,
+  prometheus: SiPrometheus,
+  sentry: SiSentry,
+  bash: SiGnubash,
+  nginx: SiNginx,
+  postgresql: BiLogoPostgresql,
 };
 
 export type IconLibrary = typeof iconLibrary;

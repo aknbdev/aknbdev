@@ -5,8 +5,8 @@ import Link from "next/link";
 const person: Person = {
   firstName: "Abdulaziz",
   lastName: "Karimbaev",
-  name: `Abdulaziz`,
-  role: "DevOps and Backend Engineer",
+  name: `Abdulaziz Karimbaev`,
+  role: "DevOps & Backend Engineer",
   avatar: "/images/avatar.jpg",
   email: "aknbdev@gmail.com",
   location: "Asia/Tashkent", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
@@ -16,12 +16,10 @@ const person: Person = {
 const newsletter: Newsletter = {
   display: true,
   title: <>Subscribe to {person.firstName}'s Newsletter</>,
-  description: <>My weekly newsletter about creativity and engineering</>,
+  description: <>I occasionally write about DevOps, automation, and backend development.</>,
 };
 
 const social: Social = [
-  // Links are automatically displayed.
-  // Import new icons in /once-ui/icons.ts
   {
     name: "GitHub",
     icon: "github",
@@ -30,7 +28,7 @@ const social: Social = [
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/in/aknbdev/",
+    link: "https://www.linkedin.com/in/aknbdev",
   },
   {
     name: "Telegram",
@@ -48,8 +46,8 @@ const home: Home = {
   path: "/",
   image: "/images/og/home.jpg",
   label: "Home",
-  title: `${person.name}'s Portfolio`,
-  description: `Portfolio website showcasing my work as a ${person.role}`,
+  title: `${person.name} Karimbaev`,
+  description: `${person.role}`,
   headline: <>Crafting with Everything as Code</>,
   featured: {
     display: true,
@@ -62,15 +60,16 @@ const home: Home = {
         </Text>
       </Row>
     ),
-    href: "/work/building-once-ui-a-customizable-design-system",
+    href: "/work/kpi-all-in-one-business-management-solution",
   },
   subline: (
     <>
-      I'm Abdulaziz, DevOps and Backend engineer at {" "}
+      I'm Abdulaziz, a DevOps Engineer with a strong foundation in backend development,
+      building reliable automated systems that help teams deliver faster and with confidence.
+      Currently working at {" "}
       <InlineCode style={{padding: 'var(--static-space-2) var(--static-space-8)'}}>
         <Link href="https://www.kpi.com">KPI.com</Link>
-      </InlineCode> specializing in Java, Spring Boot, and cloud infrastructure.
-      I craft seamless, efficient, and scalable systems that solve real-world problems.
+      </InlineCode> in Tashkent, Uzbekistan.
     </>
   ),
 };
@@ -87,17 +86,19 @@ const about: About = {
   avatar: {
     display: true,
   },
-  calendar: {
+  cv: {
     display: true,
-    link: "https://cal.com",
+    link: "/pdfs/mycv.pdf",
   },
   intro: {
     display: true,
     title: "Introduction",
     description: (
       <>
-        Abdulaziz is a Namangan-based backend developer and DevOps enthusiast
-         dedicated to solving complex technical challenges with efficient, scalable solutions.
+      DevOps Engineer with a strong foundation in backend development and experience in CI/CD automation, infrastructure management,
+      and server deployment. Skilled in tools like Jenkins, GitLab CI, Docker, and Ansible, with hands-on expertise in PostgreSQL
+      optimization, system monitoring, and containerized environments. Passionate about building reliable,
+      automated systems that help teams deliver faster and with confidence.
       </>
     ),
   },
@@ -105,33 +106,50 @@ const about: About = {
     display: true, // set to false to hide this section
     title: "Work Experience",
     experiences: [
-      {
-        company: "FinnetLimited (Cartouch.ai)",
-        timeframe: "2023.01 - 2023.07",
-        role: "Junior Java Backend Developer",
+			{
+				company: "KPI.com / DataSite Technology",
+				timeframe: "Jun 2023 - Present",
+				role: 'DevOps Engineer',
         achievements: [
-          <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
-          </>,
-          <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
-          </>,
+            <>Managing CI/CD pipelines using Jenkins and GitLab CI for multi-environment deployments (dev, staging, live)</>,
+            <>Implemented infrastructure automation using Ansible and Docker to streamline deployments</>,
+            <>Responsible for PostgreSQL performance tuning, Nginx configuration, and Sentry monitoring</>,
+            <>Collaborated with developers to improve build performance and release automation</>
         ],
-        images: [
-          // optional: leave the array empty if you don't want to display images
-          {
-            src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Once UI Project",
-            width: 16,
-            height: 9,
-          },
-        ],
+        images: []
+			},
+		  {
+          company: 'Sitelabs IT Company',
+          timeframe: 'Apr 2023 - Jun 2023',
+          role: 'DevOps Engineer Intern',
+          achievements: [
+              <>Gained hands-on experience in CI/CD workflows, system monitoring, and deployment scripting</>,
+              <>Assisted in automating server tasks and improving internal development pipelines</>
+          ],
+          images: []
+      },
+		  {
+          company: 'Sitelabs IT Company',
+          timeframe: 'Sep 2022 - Jun 2023',
+          role: 'Java Backend Developer',
+          achievements: [
+              <>Developed backend logic for web applications using Java and PostgreSQL</>,
+              <>Contributed to REST API development and backend optimizations</>
+          ],
+          images: []
+      },
+		  {
+          company: 'ISystem IT Academy',
+          timeframe: 'Jun 2022 - Sep 2022',
+          role: 'Java Backend Developer Intern',
+          achievements: [
+              <>Built backend modules and gained experience in Java, Spring Boot, and PostgreSQL</>
+          ],
+          images: []
       },
       {
         company: "iSystem IT Academy",
-        timeframe: "2022.06 - 2022.09",
+        timeframe: "Jun 2022 - Sen 2022",
         role: "Intern Java Backend Developer",
         achievements: [
           <>
@@ -151,55 +169,72 @@ const about: About = {
   },
   studies: {
     display: true, // set to false to hide this section
-    title: "Studies",
+    title: "Education & Training",
     institutions: [
       {
-        name: "iSystem IT Academy",
-        description: <>Studied Java Backend engineering.</>,
+        name: "ISystem IT Academy",
+        description: <>Backend Development with Java and Spring Boot</>,
       },{
         name: "Learning Skills Lab",
-        description: <>Studied English.</>,
+        description: <>Intermediate English Language (Aug 2020 – Feb 2021)</>,
       },
     ],
   },
   technical: {
     display: true, // set to false to hide this section
-    title: "DevOps and Backend skills",
+    title: "Technical Skills",
     skills: [
       {
         title: "DevOps",
-        // description: (
-        //   <>Able to prototype in Figma with Once UI with unnatural speed.</>
-        // ),
+        description: (
+          <>Expert in CI/CD pipelines, containerization, and infrastructure automation</>
+        ),
         tags: [
           {
+            name: "GitLab CI",
+            icon: "gitlab",
+          },{
+            name: "GitHub Actions",
+            icon: "github",
+          },{
+            name: "Jenkins",
+            icon: "jenkins",
+          },{
             name: "Docker",
             icon: "docker",
           },{
             name: "Ansible",
             icon: "ansible",
+          },{
+            name: "Python",
+            icon: "python",
+          },{
+            name: "Grafana",
+            icon: "grafana",
+          },{
+            name: "Prometheus",
+            icon: "prometheus",
+          },{
+            name: "Sentry",
+            icon: "sentry",
+          },{
+            name: "Bash",
+            icon: "bash",
           },
         ],
-        // optional: leave the array empty if you don't want to display images
         // images: [
         //   {
         //     src: "/images/projects/project-01/cover-02.jpg",
         //     alt: "Project image",
         //     width: 16,
         //     height: 9,
-        //   },
-        //   {
-        //     src: "/images/projects/project-01/cover-03.jpg",
-        //     alt: "Project image",
-        //     width: 16,
-        //     height: 9,
-        //   },
+        //   }
         // ],
       },
       {
         title: "Backend",
         description: (
-          <>Building powerfull spring-boot apps and bots.</>
+          <>Building powerful spring-boot apps.</>
         ),
         tags: [
           {
@@ -208,9 +243,11 @@ const about: About = {
           },{
             name: "Spring Boot",
             icon: "springboot",
+          },{
+            name: "Git",
+            icon: "git",
           },
         ],
-        // optional: leave the array empty if you don't want to display images
         // images: [
         //   {
         //     src: "/images/projects/project-01/cover-04.jpg",
