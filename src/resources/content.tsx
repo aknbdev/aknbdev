@@ -5,7 +5,9 @@ import Link from "next/link";
 const person: Person = {
   firstName: "Abdulaziz",
   lastName: "Karimbaev",
-  name: `Abdulaziz Karimbaev`,
+  get name() {
+		return `${this.firstName} ${this.lastName}`;
+  },
   role: "DevOps & Backend Engineer",
   avatar: "/images/avatar.jpg",
   email: "aknbdev@gmail.com",
@@ -46,7 +48,7 @@ const home: Home = {
   path: "/",
   image: "/images/og/home.jpg",
   label: "Home",
-  title: `${person.name} Karimbaev`,
+  title: `${person.name}`,
   description: `${person.role}`,
   headline: <>Crafting with Everything as Code</>,
   featured: {
