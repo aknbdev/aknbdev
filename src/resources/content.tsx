@@ -58,7 +58,7 @@ const home: Home = {
         <strong className="ml-4">aknbdev</strong>{" "}
         <Line background="brand-alpha-strong" vert height="20" />
         <Text marginRight="4" onBackground="brand-medium">
-          Automation
+          KPI: All-in-One Business Solution
         </Text>
       </Row>
     ),
