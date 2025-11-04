@@ -1,5 +1,5 @@
 import { About, Blog, Gallery, Home, Newsletter, Person, Social, Work } from "@/types";
-import { Line, Row, Text, InlineCode } from "@once-ui-system/core";
+import { Line, Row, Text, InlineCode, LetterFx } from "@once-ui-system/core";
 import Link from "next/link";
 
 const person: Person = {
@@ -58,7 +58,9 @@ const home: Home = {
         <strong className="ml-4">aknbdev</strong>{" "}
         <Line background="brand-alpha-strong" vert height="20" />
         <Text marginRight="4" onBackground="brand-medium">
-          KPI: All-in-One Business Solution
+          <LetterFx trigger="instant" speed="slow">
+            KPI: All-in-One Business Solution
+          </LetterFx>
         </Text>
       </Row>
     ),
@@ -290,44 +292,11 @@ const gallery: Gallery = {
   // These are placeholder images, replace with your own
   images: [
     {
-      src: "/images/gallery/horizontal-1.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/vertical-4.jpg",
+      src: "/images/gallery/vertical-devops-days.jpg",
       alt: "image",
       orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/horizontal-3.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/vertical-1.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/vertical-2.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/horizontal-2.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/horizontal-4.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/vertical-3.jpg",
-      alt: "image",
-      orientation: "vertical",
+      location: "Mominov str, Tashkent, Uzbekistan",
+      technical: "DevOpsDays Tashkent 2025 | Digital.uz"
     },
   ],
 };
