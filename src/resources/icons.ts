@@ -37,6 +37,7 @@ import {
   SiSentry,
   SiGnubash,
   SiNginx,
+  SiGooglecloud,
 } from "react-icons/si";
 
 import {
@@ -95,6 +96,7 @@ export const iconLibrary: Record<string, IconType> = {
   sentry: SiSentry,
   bash: SiGnubash,
   nginx: SiNginx,
+  google: SiGooglecloud,
   postgresql: BiLogoPostgresql,
 };
 

@@ -38,6 +38,11 @@ const social: Social = [
     link: "https://t.me/aknbdev",
   },
   {
+    name: "Google",
+    icon: "google",
+    link: `https://g.dev/aknbdev`,
+  },
+  {
     name: "Email",
     icon: "email",
     link: `mailto:${person.email}`,
