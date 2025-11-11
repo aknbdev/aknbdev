@@ -9,10 +9,10 @@ export default function GalleryView() {
   return (
     <MasonryGrid
       className={styles.masonryGrid}
-      columns={4}
+      columns={3}
       s={{ columns: 1 }}
       m={{ columns: 2 }}
-      l={{ columns: 4 }}
+      l={{ columns: 3 }}
       gap="16">
       {gallery.images.map((image, index) => {
 				const [triggerLocation, setTriggerLocation] = useState<() => void>(() => () => {});
