@@ -8,7 +8,6 @@ import styles from "./Gallery.module.scss";
 export default function GalleryView() {
   return (
     <MasonryGrid
-      className={styles.masonryGrid}
       columns={3}
       s={{ columns: 1 }}
       m={{ columns: 2 }}
